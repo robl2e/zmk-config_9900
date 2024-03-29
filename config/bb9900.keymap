@@ -49,6 +49,17 @@
             mods = <(MOD_LGUI)>;
         };
     };
+    macros {
+        mac0: macro_android_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp ENTER>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -66,7 +77,7 @@
 //        -----------------------------------------------------------------------------------------------------------------
 
                  &mm0                                                                                          &mm1
-    &mt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt LG(ENTER) K_BACK              &kp TAB
+    &mt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt &mac0 K_BACK                  &kp TAB
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
     &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &kp SEMI         &kp ENTER
@@ -92,7 +103,7 @@
             bindings = <
                  &msc SCRL_UP                                                                                       &msc SCRL_DOWN
     &bt BT_SEL 0            &bt BT_SEL 1                             &mkp LCLK                      &bt BT_SEL 2                     &bt BT_SEL 3
-    &mt LG(ENTER) K_BACK    &kp UP      &none &sys_reset &ext_power EP_TOG &mkp RCLK    &kp LT           &kp GT          &kp PIPE         &kp KP_EQUAL
+    &mt &mac0 K_BACK &kp UP &none &sys_reset &ext_power EP_TOG      &mkp RCLK     &kp LT           &kp GT          &kp PIPE         &kp KP_EQUAL
     &kp LEFT     &kp DOWN   &kp RIGHT   &none     &kp BSLH          &kp AMPS      &kp LBRC         &kp RBRC        &kp CARET        &kp BSPC
     &kp LSHFT    &none      &none       &td0      &bl BL_DEC        &bl BL_TOG    &bl BL_INC       &none           &bootloader      &kp ENTER
     &kp LCTRL               &kp LALT                                 &hm OUT_TOG SPACE              &tog SYM                         &tog UPPER
