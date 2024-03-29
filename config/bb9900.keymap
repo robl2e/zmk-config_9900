@@ -52,6 +52,8 @@
     macros {
         mac0: macro_android_home {
             compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LGUI>
