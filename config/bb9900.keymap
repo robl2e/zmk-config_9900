@@ -37,16 +37,34 @@
         mm0: mod_morph_0 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&mkp LCLK>;
-            mods = <(MOD_LGUI)>;
+            bindings = <&msc SCRL_UP>, <&mm0_morphed>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;            
+            keep-mods = <(MOD_RGUI)>; // carry over only to next mod-morph
+        };
+    };
+    behaviors {
+        mm0_morphed: mod_morph_0_morphed {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK>, <&msc SCRL_LEFT>;
+            mods = <(MOD_RGUI)>;
         };
     };
     behaviors {
         mm1: mod_morph_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&mkp RCLK>;
-            mods = <(MOD_LGUI)>;
+            bindings = <&msc SCRL_DOWN>, <&mm1_morphed>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;            
+            keep-mods = <(MOD_RGUI)>; // carry over only to next mod-morph            
+        };
+    };
+    behaviors {
+        mm1_morphed: mod_morph_1_morphed {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mkp RCLK>, <&msc SCRL_RIGHT>;
+            mods = <(MOD_RGUI)>;
         };
     };
 
@@ -66,7 +84,7 @@
 //        -----------------------------------------------------------------------------------------------------------------
 
                  &mm0                                                                                          &mm1
-    &mt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt C_AC_HOME K_BACK                &kp TAB
+    &mt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt C_AC_HOME K_BACK              &mt TAB RGUI
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
     &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &kp SEMI         &kp ENTER
@@ -90,7 +108,7 @@
         upper_layer {
 
             bindings = <
-                 &msc SCRL_UP                                                                                       &msc SCRL_DOWN
+                 &msc SCRL_LEFT                                                                                       &msc SCRL_RIGHT
     &bt BT_SEL 0            &bt BT_SEL 1                             &mkp LCLK                      &bt BT_SEL 2                     &bt BT_SEL 3
     &mt C_AC_HOME K_BACK &kp UP &none &sys_reset &ext_power EP_TOG  &mkp RCLK     &kp LT           &kp GT          &kp PIPE         &kp KP_EQUAL
     &kp LEFT     &kp DOWN   &kp RIGHT   &none     &kp BSLH          &kp AMPS      &kp LBRC         &kp RBRC        &kp CARET        &kp BSPC
