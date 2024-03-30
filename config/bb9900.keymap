@@ -38,8 +38,8 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&mm0_morphed>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;            
-            keep-mods = <(MOD_RGUI)>; // carry over only to next mod-morph
+            mods = <(MOD_LGUI|MOD_LALT)>;            
+            keep-mods = <(MOD_LALT)>; // carry over only to next mod-morph
         };
     };
     behaviors {
@@ -47,7 +47,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mkp LCLK>, <&msc SCRL_LEFT>;
-            mods = <(MOD_RGUI)>;
+            mods = <(MOD_LALT)>;
         };
     };
     behaviors {
@@ -55,8 +55,8 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&mm1_morphed>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;            
-            keep-mods = <(MOD_RGUI)>; // carry over only to next mod-morph            
+            mods = <(MOD_LGUI|MOD_LALT)>;            
+            keep-mods = <(MOD_LALT)>; // carry over only to next mod-morph            
         };
     };
     behaviors {
@@ -64,7 +64,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mkp RCLK>, <&msc SCRL_RIGHT>;
-            mods = <(MOD_RGUI)>;
+            mods = <(MOD_LALT)>;
         };
     };
 
@@ -84,7 +84,7 @@
 //        -----------------------------------------------------------------------------------------------------------------
 
                  &mm0                                                                                          &mm1
-    &mt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt C_AC_HOME K_BACK              &mt TAB RGUI
+    &mt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt C_AC_HOME K_BACK              &kp TAB
     &kp Q        &kp W      &kp E       &kp R     &kp T         &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F     &kp G         &kp H             &kp J            &kp K            &kp L            &kp BSPC
     &kp LSHFT    &kp Z      &kp X       &kp C     &kp V         &kp B             &kp N            &kp M            &kp SEMI         &kp ENTER
