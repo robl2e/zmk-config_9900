@@ -69,56 +69,56 @@
     };
     combos {
         compatible = "zmk,combos";
-        layers = <0>;
         combo_caps {
             timeout-ms = <50>;
             key-positions = <2 3>;
             bindings = <&kp CLCK>;
+            layers = <0>;
         };
     };
     combos {
         compatible = "zmk,combos";
-        layers = <0>;
         combo_esc {
             timeout-ms = <50>;
             key-positions = <7 8>; // Q+W
             bindings = <&kp ESC>;
+            layers = <0>;
         };
     };
     combos {
-        compatible = "zmk,combos";
-        layers = <0>;
+        compatible = "zmk,combos";        
         combo_up {
             timeout-ms = <50>;
             key-positions = <13 14>; // U+I
             bindings = <&kp UP>;
+            layers = <0>;
         };
     };
     combos {
         compatible = "zmk,combos";
-        layers = <0>;
         combo_left {
             timeout-ms = <50>;
             key-positions = <22 23>; // H+J
             bindings = <&kp LEFT>;
+            layers = <0>;
         };
     };
     combos {
-        compatible = "zmk,combos";
-        layers = <0>;
+        compatible = "zmk,combos";        
         combo_right {
             timeout-ms = <50>;
             key-positions = <24 25>; // K+L
             bindings = <&kp RIGHT>;
+            layers = <0>;
         };
     };
     combos {
         compatible = "zmk,combos";
-        layers = <0>;
         combo_down {
             timeout-ms = <50>;
             key-positions = <33 34>; // N+M
             bindings = <&kp DOWN>;
+            layers = <0>;
         };
     };
 
