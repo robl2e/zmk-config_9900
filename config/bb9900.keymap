@@ -33,40 +33,6 @@
             bindings = <&out &kp>;
         };
     };
-    behaviors {
-        mm0: mod_morph_0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&mm0_morphed>;
-            mods = <(MOD_LGUI|MOD_RALT)>;            
-            keep-mods = <(MOD_RALT)>; // carry over only to next mod-morph
-        };
-    };
-    behaviors {
-        mm0_morphed: mod_morph_0_morphed {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mkp LCLK>, <&kp LEFT>; 
-            mods = <(MOD_RALT)>;
-        };
-    };
-    behaviors {
-        mm1: mod_morph_1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&mm1_morphed>;
-            mods = <(MOD_LGUI|MOD_RALT)>;            
-            keep-mods = <(MOD_RALT)>; // carry over only to next mod-morph            
-        };
-    };
-    behaviors {
-        mm1_morphed: mod_morph_1_morphed {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&mkp RCLK>;
-            mods = <(MOD_RALT)>;
-        };
-    };
     combos {
         compatible = "zmk,combos";
         combo_m_left_clk {
@@ -95,13 +61,13 @@
         };
         combo_up {
             timeout-ms = <50>;
-            key-positions = <13 14>; // U+I
+            key-positions = <0 6>; // Shoulder1 + EndCall
             bindings = <&kp UP>;
             layers = <0>;
         };
         combo_down {
             timeout-ms = <50>;
-            key-positions = <15 16>; // O+P
+            key-positions = <1 6>; // Shoulder2 + EndCall
             bindings = <&kp DOWN>;
             layers = <0>;
         };
