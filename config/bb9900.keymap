@@ -37,40 +37,36 @@
         mm0: mod_morph_0 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&mkp LCLK>;
+            bindings = <&msc SCRL_UP>, <&mm0_morphed>;
             mods = <(MOD_LGUI|MOD_RALT)>;            
             keep-mods = <(MOD_RALT)>; // carry over only to next mod-morph
         };
     };
-/*
     behaviors {
         mm0_morphed: mod_morph_0_morphed {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mkp LCLK>, <&msc SCRL_LEFT>;
+            bindings = <&mkp LCLK>, <&kp LEFT>;
             mods = <(MOD_RALT)>;
         };
     };
-*/
     behaviors {
         mm1: mod_morph_1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&mkp RCLK>;
+            bindings = <&msc SCRL_DOWN>, <&mm1_morphed>;
             mods = <(MOD_LGUI|MOD_RALT)>;            
             keep-mods = <(MOD_RALT)>; // carry over only to next mod-morph            
         };
     };
-/*
     behaviors {
         mm1_morphed: mod_morph_1_morphed {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mkp RCLK>, <&msc SCRL_RIGHT>;
-            mods = <(RALT)>;
+            bindings = <&mkp RCLK>, <&kp RIGHT>;
+            mods = <(MOD_RALT)>;
         };
     };
-*/
     combos {
         compatible = "zmk,combos";
         combo_caps {
@@ -85,16 +81,16 @@
             bindings = <&kp ESC>;
             layers = <0>;
         };
-        combo_left {
+        combo_up {
             timeout-ms = <50>;
             key-positions = <13 14>; // U+I
-            bindings = <&kp LEFT>;
+            bindings = <&kp UP>;
             layers = <0>;
         };
-        combo_right {
+        combo_down {
             timeout-ms = <50>;
             key-positions = <15 16>; // O+P
-            bindings = <&kp RIGHT>;
+            bindings = <&kp DOWN>;
             layers = <0>;
         };
     };
