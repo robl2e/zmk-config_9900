@@ -55,19 +55,19 @@
         };
         combo_right {
             timeout-ms = <100>;
-            key-positions = <1 2>; // Shoulder2 + CallKey
+            key-positions = <1 6>; // Shoulder2 + EndCall
             bindings = <&kp RIGHT>;
             layers = <0>;
         };
         combo_up {
             timeout-ms = <100>;
-            key-positions = <0 6>; // Shoulder1 + EndCall
+            key-positions = <0 39>; // Shoulder1 + Space
             bindings = <&kp UP>;
             layers = <0>;
         };
         combo_down {
             timeout-ms = <100>;
-            key-positions = <1 6>; // Shoulder2 + EndCall
+            key-positions = <1 39>; // Shoulder2 + Space
             bindings = <&kp DOWN>;
             layers = <0>;
         };
