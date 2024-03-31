@@ -36,37 +36,37 @@
     combos {
         compatible = "zmk,combos";
         combo_m_left_clk {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 3>; // Shoulder1 + BBKey
             bindings = <&mkp LCLK>;
             layers = <0>;
         };
         combo_m_right_clk {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <1 3>; // Shoulder2 + BBKey
             bindings = <&mkp RCLK>;
             layers = <0>;
         };
         combo_left {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 2>; // Shoulder1 + CallKey
             bindings = <&kp LEFT>;
             layers = <0>;
         };
         combo_right {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <1 2>; // Shoulder2 + CallKey
             bindings = <&kp RIGHT>;
             layers = <0>;
         };
         combo_up {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <0 6>; // Shoulder1 + EndCall
             bindings = <&kp UP>;
             layers = <0>;
         };
         combo_down {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <1 6>; // Shoulder2 + EndCall
             bindings = <&kp DOWN>;
             layers = <0>;
