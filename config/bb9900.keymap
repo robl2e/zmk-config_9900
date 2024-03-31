@@ -46,7 +46,7 @@
         mm0_morphed: mod_morph_0_morphed {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&mkp LCLK>;
+            bindings = <&mkp LCLK>, <&kp LEFT>; 
             mods = <(MOD_RALT)>;
         };
     };
