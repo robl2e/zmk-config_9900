@@ -38,8 +38,8 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&mkp LCLK>;
-            mods = <(MOD_LGUI|RALT)>;            
-            keep-mods = <(RALT)>; // carry over only to next mod-morph
+            mods = <(MOD_LGUI|MOD_RALT)>;            
+            keep-mods = <(MOD_RALT)>; // carry over only to next mod-morph
         };
     };
 /*
@@ -48,7 +48,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mkp LCLK>, <&msc SCRL_LEFT>;
-            mods = <(RALT)>;
+            mods = <(MOD_RALT)>;
         };
     };
 */
@@ -57,8 +57,8 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&mkp RCLK>;
-            mods = <(MOD_LGUI|RALT)>;            
-            keep-mods = <(RALT)>; // carry over only to next mod-morph            
+            mods = <(MOD_LGUI|MOD_RALT)>;            
+            keep-mods = <(MOD_RALT)>; // carry over only to next mod-morph            
         };
     };
 /*
