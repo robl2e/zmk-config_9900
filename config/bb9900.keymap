@@ -90,8 +90,8 @@
                  &msc SCRL_UP                                                                                       &msc SCRL_DOWN
     &mt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt C_AC_HOME K_BACK              &kp TAB
     &mt HASH Q   &mt N1 W   &mt N2 E    &mt N3 R  &mt LPAR T    &mt RPAR Y        &mt UNDER U      &mt MINUS I      &mt PLUS O       &mt AT P
-    &mt STAR A   &mt N4 S   &mt N5 D    &mt N6 F  &mt SLASH G   &mt COLON H       &mt DLLR J       &mt APOS K       &mt DQT L        &kp BSPC
-    &kp LSHFT    &mt N7 Z   &mt N8 X    &mt N9 C  &mt QMARK V   &mt EXCL B        &mt COMMA N      &mt DOT M        &kp SEMI         &kp ENTER
+    &mt STAR A   &mt N4 S   &mt N5 D    &mt N6 F  &mt SLASH G   &mt COLON H       &mt SEMI J       &mt APOS K       &mt DQT L        &kp BSPC
+    &kp LSHFT    &mt N7 Z   &mt N8 X    &mt N9 C  &mt QMARK V   &mt EXCL B        &mt COMMA N      &mt DOT M        &mt DLLR N0      &kp ENTER
     &kp LCTRL               &kp LALT                            &kp SPACE                          &tog SYM                          &tog UPPER
             >;
         };
