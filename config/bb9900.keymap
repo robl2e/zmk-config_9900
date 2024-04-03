@@ -33,6 +33,26 @@
             bindings = <&out &kp>;
         };
     };
+    behaviors {
+      tap: tap {
+        compatible = "zmk,behavior-macro-one-param";
+        #binding-cells = <1>;
+        // By default, macros will tap each behavior in the bindings list,
+        // so this will tap "&kp <param1>".
+        bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+      };
+
+      // &mt where held key does not repeat
+      mtt: mod_tap_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <250>;
+        quick-tap-ms = <200>;
+        require-prior-idle-ms = <125>;
+        bindings = <&tap>, <&tap>;
+      };
+    };
     combos {
         compatible = "zmk,combos";
         combo_m_left_clk {
@@ -88,10 +108,10 @@
 //        |         aA     |         0           |           SPACE              |         SYM         |        aA          |       
 //        -----------------------------------------------------------------------------------------------------------------
                  &msc SCRL_UP                                                                                       &msc SCRL_DOWN
-    &mt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt C_AC_HOME K_BACK              &kp TAB
-    &mt HASH Q   &mt N1 W   &mt N2 E    &mt N3 R  &mt LPAR T    &mt RPAR Y        &mt UNDER U      &mt MINUS I      &mt PLUS O       &mt AT P
-    &mt STAR A   &mt N4 S   &mt N5 D    &mt N6 F  &mt SLASH G   &mt COLON H       &mt SEMI J       &mt APOS K       &mt DQT L        &kp BSPC
-    &kp LSHFT    &mt N7 Z   &mt N8 X    &mt N9 C  &mt QMARK V   &mt EXCL B        &mt COMMA N      &mt DOT M        &mt DLLR N0      &kp ENTER
+    &mtt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt C_AC_HOME K_BACK              &kp TAB
+    &mtt HASH Q  &mtt N1 W   &mtt N2 E    &mtt N3 R  &mtt LPAR T    &mtt RPAR Y        &mtt UNDER U      &mtt MINUS I      &mtt PLUS O       &mtt AT P
+    &mtt STAR A  &mtt N4 S   &mtt N5 D    &mtt N6 F  &mtt SLASH G   &mtt COLON H       &mtt SEMI J       &mtt APOS K       &mtt DQT L        &kp BSPC
+    &kp LSHFT    &mtt N7 Z   &mtt N8 X    &mtt N9 C  &mtt QMARK V   &mtt EXCL B        &mtt COMMA N      &mtt DOT M        &mtt DLLR N0      &kp ENTER
     &kp LCTRL               &kp LALT                            &kp SPACE                          &tog SYM                          &tog UPPER
             >;
         };
