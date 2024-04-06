@@ -33,6 +33,7 @@
             bindings = <&out &kp>;
         };
     };
+    // Credit: Drexel Macintosh
     behaviors {
       tap: tap {
         compatible = "zmk,behavior-macro-one-param";
@@ -111,8 +112,8 @@
     &mtt ESC CLCK            &kp LGUI                            &mkp LCLK                          &mt C_AC_HOME K_BACK              &kp TAB
     &mtt HASH Q  &mtt N1 W   &mtt N2 E    &mtt N3 R  &mtt LPAR T    &mtt RPAR Y        &mtt UNDER U      &mtt MINUS I      &mtt PLUS O       &mtt AT P
     &mtt STAR A  &mtt N4 S   &mtt N5 D    &mtt N6 F  &mtt SLASH G   &mtt COLON H       &mtt SEMI J       &mtt APOS K       &mtt DQT L        &kp BSPC
-    &kp LSHFT    &mtt N7 Z   &mtt N8 X    &mtt N9 C  &mtt QMARK V   &mtt EXCL B        &mtt COMMA N      &mtt DOT M        &mtt DLLR N0      &kp ENTER
-    &kp LCTRL               &kp LALT                            &kp SPACE                          &tog SYM                          &tog UPPER
+    &sk LSHFT    &mtt N7 Z   &mtt N8 X    &mtt N9 C  &mtt QMARK V   &mtt EXCL B        &mtt COMMA N      &mtt DOT M        &mtt DLLR N0      &kp ENTER
+    &sk LCTRL               &sk LALT                            &kp SPACE                          &tog SYM                          &tog UPPER
             >;
         };
 
