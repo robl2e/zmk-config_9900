@@ -80,8 +80,14 @@
         };
         combo_m_right_clk {
             timeout-ms = <100>;
-            key-positions = <1 3>; // Shoulder2 + BBKey
+            key-positions = <1 5>; // Shoulder2 + BackKey
             bindings = <&mkp RCLK>;
+            layers = <0>;
+        };
+        combo_c_menu {
+            timeout-ms = <100>;
+            key-positions = <1 3>; // Shoulder2 + BBKey
+            bindings = <&kp K_CMENU>;
             layers = <0>;
         };
         combo_left {
