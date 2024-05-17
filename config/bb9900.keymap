@@ -42,7 +42,7 @@
         };
     };
     behaviors {
-        UPPERL: tap_dance_1 {
+        UPPERL: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <500>;
