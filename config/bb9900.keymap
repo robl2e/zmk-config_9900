@@ -42,6 +42,14 @@
         };
     };
     behaviors {
+        UPPERL: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&sl UPPER>, <&tog UPPER>;
+        };
+    };
+    behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -129,7 +137,7 @@
     &mtt HASH Q  &mtt N1 W   &mtt N2 E    &mtt N3 R  &mtt LPAR T    &mtt RPAR Y        &mtt UNDER U      &mtt MINUS I      &mtt PLUS O       &mtt AT P
     &mtt STAR A  &mtt N4 S   &mtt N5 D    &mtt N6 F  &mtt SLASH G   &mtt COLON H       &mtt SEMI J       &mtt APOS K       &mtt DQT L        &kp BSPC
     &sk LSHFT    &mtt N7 Z   &mtt N8 X    &mtt N9 C  &mtt QMARK V   &mtt EXCL B        &mtt COMMA N      &mtt DOT M        &mtt DLLR N0      &kp ENTER
-    &sk LCTRL               &sk LALT                            &kp SPACE                          &SYML                          &tog UPPER
+    &sk LCTRL               &sk LALT                            &kp SPACE                          &SYML                          &UPPERL
             >;
         };
 
